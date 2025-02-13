@@ -3,7 +3,7 @@ import HomeSlider from "../../components/HomeSlider/HomeSlider";
 import CategorySlider from "../../components/CategorySlider/CategorySlider";
 import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
-import Loading from "../../Components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 import Card from "../../Components/Card/Card";
 
 export default function Home() {
