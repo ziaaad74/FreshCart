@@ -22,9 +22,6 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import UserProvider from "./context/User.Context";
 import ProductsProvider from "./context/Products.context";
 import WhishListProvider from "./context/Wishlist.context";
-// import UserProvider from "./context/User.context";
-// import ProductsProvider from "./context/Products.context";
-// import WhishListProvider from "./context/Wishlist.context";
 
 export default function App() {
   const router = createBrowserRouter([
