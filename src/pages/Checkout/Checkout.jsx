@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Helmet } from "react-helmet";
 import * as Yup from "yup";
 import { cartContext } from "../../context/Card.context";
-import { userContext } from "../../context/User.context";
+import { userContext } from "../../context/User.Context";
 export default function Checkout() {
   const { token } = useContext(userContext);
   const { cardInfo, getProductFromCart } = useContext(cartContext);
