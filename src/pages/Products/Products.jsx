@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet";
 import { useContext } from "react";
 import { useFormik } from "formik";
-import Loading from "../../Components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 import { ProductsContext } from "../../context/Products.context";
 import Card from "../../Components/Card/Card";
 import DropdownFilter from "../../components/DropdownFilter/DropdownFilter";

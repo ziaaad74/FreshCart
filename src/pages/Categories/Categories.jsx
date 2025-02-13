@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import Loading from "../../Components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
 import { useState } from "react";

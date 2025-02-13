@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 
-import Loading from "../../Components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 import { ModelBrand } from "../../components/ModelBrand/ModelBrand";
 
 export default function Brands() {

@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import freshCartLogo from "../../assets/images/freshcart-logo.svg";
 import { useContext, useEffect } from "react";
 import { cartContext } from "../../context/Card.context";
-import { userContext } from "../../context/User.context";
+import { userContext } from "../../context/User.Context";
 import { WishListContext } from "../../context/Wishlist.context";
 export default function Navbar() {
   let { token, logOut } = useContext(userContext);
