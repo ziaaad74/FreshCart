@@ -4,7 +4,7 @@ import CategorySlider from "../../components/CategorySlider/CategorySlider";
 import { Helmet } from "react-helmet";
 import { useQuery } from "@tanstack/react-query";
 import Loading from "../../components/Loading/Loading";
-import Card from "../../Components/Card/Card";
+import Card from "../../components/Card/Card";
 
 export default function Home() {
   async function getProducts() {
