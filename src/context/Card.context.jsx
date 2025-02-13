@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { createContext } from "react";
 import axios from "axios";
 import toast from "react-hot-toast/headless";
-import { userContext } from "./User.context";
+import { userContext } from "./User.Context";
 
 export const cartContext = createContext(null);
 
