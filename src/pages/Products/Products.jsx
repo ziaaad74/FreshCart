@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { useFormik } from "formik";
 import Loading from "../../components/Loading/Loading";
 import { ProductsContext } from "../../context/Products.context";
-import Card from "../../Components/Card/Card";
+import Card from "../../components/Card/Card";
 import DropdownFilter from "../../components/DropdownFilter/DropdownFilter";
 
 export default function Prouducts() {
