@@ -4,8 +4,7 @@
 
 @layer components {
     .form-control {
-        /* @apply px-3 py-1 w-full border-2 border-slate-400 rounded-md caret-primary-800; */
-        @apply px-3 py-1 w-full border-[1px] bg-slate-50 border-solid border-slate-400 caret-primary-800 rounded-md
+        @apply px-3 py-1 w-full rounded-md border-2 bg-slate-50 border-solid border-slate-400 caret-primary-800
     }
 
     .btn {
