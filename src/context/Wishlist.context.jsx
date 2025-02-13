@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState } from "react";
-import { userContext } from "./User.context";
+import { userContext } from "./User.Context";
 import axios from "axios";
 import toast from "react-hot-toast";
 
