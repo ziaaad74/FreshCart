@@ -19,7 +19,7 @@ import Brands from "./pages/Brands/Brands";
 import Wishlist from "./pages/Wishlist/Wishlist";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import UserProvider from "./context/User.context";
+import UserProvider from "./context/User.Context";
 import ProductsProvider from "./context/Products.context";
 import WhishListProvider from "./context/Wishlist.context";
 // import UserProvider from "./context/User.context";
