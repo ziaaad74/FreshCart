@@ -14,6 +14,7 @@ export default function WishList() {
   useEffect(() => {
     getLoggedUserWishlist();
   }, []);
+
   return (
     <>
       <Helmet>
@@ -32,68 +33,68 @@ export default function WishList() {
           content="Create and manage your wishlist on Freshcart. Save your favorite products and buy them later."
         />
       </Helmet>
+
       <h1 className="text-2xl md:text-3xl font-bold mb-5 text-primary-500 border-b-2 border-primary-500 pb-2 flex items-center gap-2">
-        <i className="fa-solid fa-heart text-3xl "></i> My Wishlist
+        <i className="fa-solid fa-heart text-3xl"></i> My Wishlist
       </h1>
-      <section className="my-wishlist shadow-md p-5 rounded-md bg-gray-100 space-y-4 mb-5">
+
+      <section className="shadow-md p-5 rounded-md bg-gray-100 space-y-4 mb-5">
         {productWishlist && productWishlist?.data.length !== 0 ? (
           productWishlist.data.map((product) => (
             <div
               key={product.id}
-              className="flex bg-white rounded-md items-center gap-5 shadow-md p-5 relative"
+              className="flex flex-col sm:flex-row bg-white rounded-md items-center gap-5 shadow-md p-5 relative"
             >
-              <div className="w-[100px] sm:min-w-[150px]  h-[150px] ">
+              <div className="w-full sm:w-[150px] h-[200px] sm:h-[150px] flex-shrink-0">
                 <img
                   src={product.imageCover}
-                  className="w-full h-full object-cover"
-                  alt=""
+                  className="w-full h-full object-cover rounded-md"
+                  alt={product.title}
                 />
               </div>
-              <div className="flex justify-between gap-3 flex-1 items-center  flex-wrap ">
+
+              <div className="flex flex-1 flex-col sm:flex-row justify-between gap-3 items-center w-full text-center sm:text-left">
                 <article>
-                  <h3 className="text-sm md:text-lg font-semibold ">
+                  <h3 className="text-base sm:text-lg font-semibold">
                     {product.title}
                   </h3>
-                  <h4 className="text-sm md:text-lg font-semibold">
+                  <h4 className="text-sm sm:text-lg font-semibold text-gray-700">
                     ${product.price}
                   </h4>
                 </article>
-              </div>
-              <div className="space-x-3">
-                <button
-                  onClick={() => {
-                    addProductToCart({ productId: product.id });
-                  }}
-                  className="bg-primary-500 text-white p-3 rounded-md hover:bg-primary-700"
-                >
-                  Add To Cart
-                </button>
-                <button
-                  onClick={() => {
-                    deleteProductFromWishlist({ productId: product.id });
-                  }}
-                  className="bg-red-500 text-white p-3 rounded-md hover:bg-red-700"
-                >
-                  Remove
-                </button>
+
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto">
+                  <button
+                    onClick={() => addProductToCart({ productId: product.id })}
+                    className="bg-primary-500 text-white px-4 py-2 rounded-md hover:bg-primary-700 transition w-full sm:w-auto"
+                  >
+                    Add To Cart
+                  </button>
+                  <button
+                    onClick={() =>
+                      deleteProductFromWishlist({ productId: product.id })
+                    }
+                    className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700 transition w-full sm:w-auto"
+                  >
+                    Remove
+                  </button>
+                </div>
               </div>
             </div>
           ))
         ) : productWishlist?.data.length === 0 ? (
-          <>
-            <div className="text-center p-5">
-              <p className="mb-7">
-                <b>Oops!</b> Your wishlist is empty. Go to home page and start
-                adding products you like to wishlist
-              </p>
-              <Link
-                to="/"
-                className="btn bg-primary-500 hover:bg-primary-600 px-5 py-2"
-              >
-                Back To Home
-              </Link>
-            </div>
-          </>
+          <div className="text-center p-5">
+            <p className="mb-7">
+              <b>Oops!</b> Your wishlist is empty. Go to home page and start
+              adding products you like to wishlist
+            </p>
+            <Link
+              to="/"
+              className="bg-primary-500 hover:bg-primary-600 px-5 py-2 text-white rounded-md"
+            >
+              Back To Home
+            </Link>
+          </div>
         ) : (
           <Loading />
         )}
