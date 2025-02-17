@@ -115,7 +115,10 @@ export default function Orders() {
               {/* إجمالي سعر الطلب */}
               <h2 className="mt-4 text-lg font-semibold text-center sm:text-left">
                 Total Order Price:{" "}
-                <span className="text-primary-500">{14203}</span> L.E
+                <span className="text-primary-500">
+                  {order.totalOrderPrice}
+                </span>{" "}
+                L.E
               </h2>
             </div>
           ))}
