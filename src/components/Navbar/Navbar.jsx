@@ -87,7 +87,7 @@ export default function Navbar() {
 
           <div className="flex items-center space-x-6">
             {!token ? (
-              <div className="hidden md:flex space-x-5">
+              <div className="flex space-x-5">
                 <NavLink to="/login">Login</NavLink>
                 <NavLink to="/signup">Signup</NavLink>
               </div>
