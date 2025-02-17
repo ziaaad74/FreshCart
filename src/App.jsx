@@ -37,7 +37,7 @@ export default function App() {
         { path: "cart", element: <Cart /> },
         { path: "product/:id", element: <ProductDetails /> },
         { path: "checkout", element: <Checkout /> },
-        { path: "allorders", element: <Orders /> },
+        { path: "orders", element: <Orders /> },
         { path: "categories", element: <Categories /> },
         { path: "products", element: <Products /> },
         { path: "brands", element: <Brands /> },
