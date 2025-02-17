@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-slate-100 fixed top-0 right-0 left-0 w-full z-50">
-        <div className="container mx-auto py-3 flex items-center justify-between">
+        <div className="container mx-auto py-3 flex items-center justify-between px-2">
           <div className="flex items-center">
             <img src={freshCartLogo} alt="FreshCart Logo" className="w-32" />
           </div>
