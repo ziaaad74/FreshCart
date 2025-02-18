@@ -83,7 +83,7 @@ export default function Signup() {
           <input
             className="form-control focus:border-primary-600 focus:outline-none"
             type="text"
-            placeholder="Type Your Name"
+            placeholder="Name"
             value={formik.values.name}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}

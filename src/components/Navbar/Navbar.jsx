@@ -47,12 +47,14 @@ export default function Navbar() {
             </ul>
           )}
 
-          <button
-            className="md:hidden text-3xl text-gray-700"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            ☰
-          </button>
+          {token && (
+            <button
+              className="md:hidden text-3xl text-gray-700"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              ☰
+            </button>
+          )}
 
           <div
             className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-5 z-50 transition-transform transform ${
@@ -85,7 +87,7 @@ export default function Navbar() {
             </ul>
           </div>
 
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-6 px-2">
             {!token ? (
               <div className="flex space-x-5">
                 <NavLink to="/login">Login</NavLink>
