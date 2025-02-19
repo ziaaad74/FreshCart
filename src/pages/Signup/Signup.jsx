@@ -74,11 +74,11 @@ export default function Signup() {
       <Helmet>
         <title>Sign UP</title>
       </Helmet>
-      <h1>
-        <i className="fa-duotone fa-solid fa-user mr-3 mb-5"></i>Register Now :
+      <h1 className="px-2 text-primary-600">
+        <i className="fa-duotone fa-solid fa-user mr-2 mb-5"></i>Register Now :
       </h1>
 
-      <form action="" onSubmit={formik.handleSubmit} className="space-y-3">
+      <form action="" onSubmit={formik.handleSubmit} className="space-y-3 px-2">
         <div className="username">
           <input
             className="form-control focus:border-primary-600 focus:outline-none"
